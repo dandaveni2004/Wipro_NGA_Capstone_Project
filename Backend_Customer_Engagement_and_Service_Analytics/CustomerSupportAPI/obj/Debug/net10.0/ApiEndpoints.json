@@ -1,0 +1,75 @@
+[
+  {
+    "ContainingType": "CustomerSupportAPI.Controllers.CustomerController",
+    "Method": "AddCustomer",
+    "RelativePath": "api/customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "CustomerSupportAPI.Models.Customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerSupportAPI.Controllers.CustomerController",
+    "Method": "GetCustomers",
+    "RelativePath": "api/customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerSupportAPI.Controllers.TicketController",
+    "Method": "CreateTicket",
+    "RelativePath": "api/tickets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticket",
+        "Type": "CustomerSupportAPI.Models.Ticket",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerSupportAPI.Controllers.TicketController",
+    "Method": "GetTickets",
+    "RelativePath": "api/tickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerSupportAPI.Controllers.TicketController",
+    "Method": "UpdateTicketStatus",
+    "RelativePath": "api/tickets/{ticketId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "newStatus",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

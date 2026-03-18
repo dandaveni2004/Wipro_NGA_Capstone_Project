@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tickets</title>
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+<div class="container-fluid">
+<a href="index.html" class="navbar-brand">ConnectPlus</a>
+</div>
+</nav>
+<div class="container mt-4">
+<h2>Create Ticket</h2>
+<input id="customer" class="form-control mb-2"
+placeholder="Customer Name">
+<input id="issue" class="form-control mb-2"
+placeholder="Issue">
+<select id="category" class="form-control mb-2">
+<option value="1">Billing</option>
+<option value="2">Software</option>
+<option value="3">Account Access</option>
+<option value="4">Technical Issue</option>
+<option value="5">Login Problem</option>
+</select>
+<select id="agent" class="form-control mb-2">
+<option value="1">Agent Sanvith</option>
+<option value="2">Agent Dhruvan</option>
+<option value="3">Agent Madhukar</option>
+<option value="4">Agent Nithin</option>
+<option value="5">Agent Rohith</option>
+</select>
+<select id="status" class="form-control mb-2">
+<option>Open</option>
+<option>In Progress</option>
+<option>Closed</option>
+</select>
+<button class="btn btn-success"
+onclick="createTicket()">
+Create Ticket
+</button>
+<h2 class="mt-5">All Tickets</h2>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Customer</th>
+<th>Category</th>
+<th>Agent</th>
+<th>Issue</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="ticketTable">
+</tbody>
+</table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

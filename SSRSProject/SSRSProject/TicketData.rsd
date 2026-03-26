@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>CustomerDB</DataSourceReference>
+      <CommandText>SELECT 
+    C.Name AS CustomerName,
+    A.AgentName,
+    TC.CategoryName,
+    T.Issue,
+    T.Status,
+    T.CreatedAt
+FROM Tickets T
+JOIN Customers C ON T.CustomerId = C.CustomerId
+JOIN Agents A ON T.AgentId = A.AgentId
+JOIN TicketCategories TC ON T.CategoryId = TC.CategoryId
+ORDER BY T.CreatedAt DESC;</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="CustomerName">
+        <DataField>CustomerName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="AgentName">
+        <DataField>AgentName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CategoryName">
+        <DataField>CategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Issue">
+        <DataField>Issue</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Status">
+        <DataField>Status</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CreatedAt">
+        <DataField>CreatedAt</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
